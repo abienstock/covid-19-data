@@ -26,7 +26,6 @@ with open('us-counties.csv') as csvfile:
         secondday = npdata[1:]
         diff = np.subtract(secondday, firstday)
         fig, ax = plt.subplots()
-        print(indices.shape, npdata.shape)
         plt.scatter(indices, diff[:,0], label='cases', s=5)
         plt.plot(indices, diff[:,0])
         plt.scatter(indices, diff[:,1], label='deaths', s=5)
