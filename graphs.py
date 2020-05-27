@@ -1,3 +1,5 @@
+# author: Alex Bienstock
+
 import csv
 import sys
 import numpy as np
