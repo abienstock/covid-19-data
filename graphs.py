@@ -35,7 +35,7 @@ with open('us-counties.csv') as csvfile:
     date_indices = date_indices
     nth_dates = nth_dates
 
-    npdata = np.asarray(data, dtype=np.int16)
+    npdata = np.asarray(data, dtype=np.int)
     indices = np.arange(npdata.shape[0])
     if str(sys.argv[3]) == "new":
         dates = dates[1:]
@@ -84,7 +84,6 @@ with open('us-counties.csv') as csvfile:
                 sel.annotation.set_text(dates[i] + '\n' + str(npdata[i,0]) + ' cases')
             else:
                 sel.annotation.set_text(dates[i] + '\n' + str(npdata[i,1]) + ' deaths')
-        
         plt.plot(dates, npdata[:,0])
         plt.plot(dates, npdata[:,1])        
         plt.show()
